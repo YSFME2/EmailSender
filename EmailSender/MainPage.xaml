@@ -42,7 +42,7 @@
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage>
-    <ContentPage Title="To Emails">
+    <ContentPage Title="Sending">
         <ScrollView>
             <VerticalStackLayout
             Spacing="10"
@@ -50,18 +50,7 @@
             VerticalOptions="Center">
                 <Label Text="Emails"/>
                 <Editor x:Name="txtEmails" AutoSize="TextChanges"/>
-            </VerticalStackLayout>
-        </ScrollView>
-    </ContentPage>
-    <ContentPage Title="Sending">
-        <ScrollView>
-            <VerticalStackLayout
-            Spacing="10"
-            Padding="30,0"
-            VerticalOptions="Center">
-                <Label Text="Delay intervals (Seconds)"/>
-                <Entry x:Name="txtIntervals" Grid.Column="1" Placeholder="2" Text="2" Keyboard="Numeric"/>
-                <Button x:Name="btnSend" Text="SEND"/>
+                <Button x:Name="btnSend" Text="SEND" HorizontalOptions="Center"/>
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage>
