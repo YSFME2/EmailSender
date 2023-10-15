@@ -1,30 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmailSender.MainPage">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Label" ApplyToDerivedTypes="True">
-                <Setter Property="VerticalTextAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="0,0,10,0"/>
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ScrollView>
-        <VerticalStackLayout
+
+    <ContentPage Title="Your Email">
+        <ScrollView>
+            <VerticalStackLayout
             Spacing="10"
             Padding="30,0"
             VerticalOptions="Center">
-            <Grid ColumnDefinitions="auto,*" RowDefinitions="auto,auto,auto" RowSpacing="10">
-                <Label Text="Email"/>
-                <Entry x:Name="txtEmail" Grid.Column="1" Placeholder="abc@abc.com" ReturnType="Next"/>
-                <Label Text="Password" Grid.Row="1"/>
-                <Entry x:Name="txtPassword" Grid.Row="1" Grid.Column="1" IsPassword="True" ReturnType="Next"/>
-                <Label Text="Port" Grid.Row="2"/>
-                <Entry x:Name="txtPort" Grid.Row="2" Grid.Column="1"  Placeholder="587 for gmail, 25," Text="587" ReturnType="Next"/>
-            </Grid>
-            
-        </VerticalStackLayout>
-    </ScrollView>
-
-</ContentPage>
+                <Grid ColumnDefinitions="auto,*" RowSpacing="10" RowDefinitions="auto,auto,auto,auto,auto">
+                    <Label Text="Your Name"/>
+                    <Entry x:Name="txtName" Grid.Column="1" Keyboard="Text" Placeholder="Youssef" ReturnType="Next"/>
+                    <Label Text="Email" Grid.Row="1"/>
+                    <Entry x:Name="txtEmail" Grid.Row="1" Grid.Column="1" Keyboard="Email" Placeholder="abc@abc.com" ReturnType="Next"/>
+                    <Label Text="Password" Grid.Row="2"/>
+                    <Entry x:Name="txtPassword" Grid.Row="2" Grid.Column="1" IsPassword="True" ReturnType="Next"/>
+                    <Label Text="SMTP Host" Grid.Row="3"/>
+                    <Entry x:Name="txtsmtp" Grid.Row="3" Grid.Column="1" Keyboard="Numeric" Text="smtp.gmail.com"  Placeholder="smtp.gmail.com" />
+                    <Label Text="Port" Grid.Row="4"/>
+                    <Entry x:Name="txtPort" Grid.Row="4" Grid.Column="1" Keyboard="Numeric"  Placeholder="587, 465, 25" Text="587" />
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Message Contents">
+        <ScrollView>
+            <VerticalStackLayout
+            Spacing="10"
+            Padding="30,0"
+            VerticalOptions="Center">
+                <Grid ColumnDefinitions="auto,*,auto" RowSpacing="10" RowDefinitions="auto,auto,auto">
+                    <Label Text="Message Subject"/>
+                    <Entry x:Name="txtSubject" Grid.Column="1" Grid.ColumnSpan="2" ReturnType="Next"/>
+                    <Label Text="Message" Grid.Row="1"/>
+                    <Editor x:Name="txtMessage" Grid.Row="1" Keyboard="Plain" AutoSize="TextChanges" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Label Text="Resume" Grid.Row="2"/>
+                    <Entry x:Name="txtResume" Grid.Row="2" IsReadOnly="True" Grid.Column="1" />
+                    <Button x:Name="btnLoadResume" Grid.Row="2" Grid.Column="2" Text="Load File" Clicked="Button_Clicked" Margin="5,0,0,0" />
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="To Emails">
+        <ScrollView>
+            <VerticalStackLayout
+            Spacing="10"
+            Padding="30,0"
+            VerticalOptions="Center">
+                <Label Text="Emails"/>
+                <Editor x:Name="txtEmails" AutoSize="TextChanges"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Sending">
+        <ScrollView>
+            <VerticalStackLayout
+            Spacing="10"
+            Padding="30,0"
+            VerticalOptions="Center">
+                <Label Text="Delay intervals (Seconds)"/>
+                <Entry x:Name="txtIntervals" Grid.Column="1" Placeholder="2" Text="2" Keyboard="Numeric"/>
+                <Button x:Name="btnSend" Text="SEND"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>

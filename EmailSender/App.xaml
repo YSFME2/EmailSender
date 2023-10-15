@@ -8,6 +8,15 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary>
+                    <Style TargetType="Label" ApplyToDerivedTypes="True">
+                        <Setter Property="VerticalTextAlignment" Value="Center"/>
+                        <Setter Property="Margin" Value="0,0,10,0"/>
+                    </Style>
+                    <Style TargetType="Entry">
+                        <Setter Property="VerticalOptions" Value="Center"/>
+                    </Style>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
