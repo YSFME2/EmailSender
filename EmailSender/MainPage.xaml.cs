@@ -86,6 +86,7 @@ namespace EmailSender
             mailMessage.Subject = txtSubject.Text;
             mailMessage.Sender = new MailAddress(txtEmail.Text, txtName.Text);
             mailMessage.Body = txtMessage.Text;
+            mailMessage.IsBodyHtml = false;
             foreach (var attachment in attachments)
             {
                 mailMessage.Attachments.Add(attachment);
