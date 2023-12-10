@@ -67,7 +67,7 @@ namespace EmailSender
             var resumeFileStream = await resumeFile.OpenReadAsync();
             try
             {
-                await Task.Run(() => SendToMail(toEmail,new Attachment(resumeFileStream,"Youssef Shaaban Resume.pdf")));
+                await Task.Run(() => SendToMail(toEmail,new Attachment(resumeFileStream,resumeFile.FileName)));
 
                 await DisplayAlert("Sent", "Your Email Sent successfully!", "Ok");
             }
