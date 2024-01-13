@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace EmailSender
+namespace ResumeSender
 {
     public class Program
     {

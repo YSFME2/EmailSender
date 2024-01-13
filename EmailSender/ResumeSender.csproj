@@ -19,10 +19,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>EmailSender</ApplicationTitle>
+		<ApplicationTitle>ResumeSender</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.emailsender</ApplicationId>
+		<ApplicationId>com.youssefshaaban.resumesender</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -37,29 +37,28 @@
 		<DefaultLanguage>en</DefaultLanguage>
 		<Authors>Youssef Shaaban</Authors>
 		<Company>Youssef Shaaban</Company>
-		<PackageIcon>08.jpg</PackageIcon>
-		<Title>Email Sender</Title>
-		<Product>Email Sender</Product>
+		<PackageIcon>mail.png</PackageIcon>
+		<Title>Resume Sender</Title>
+		<Product>Resume Sender</Product>
 		<GenerateAppInstallerFile>False</GenerateAppInstallerFile>
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 		<PackageCertificateThumbprint>77CCD91B6DEB3B987AA9992138A70A53BAEE2423</PackageCertificateThumbprint>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
 		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+		<AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+		<GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\AppIcon\icon.png" />
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -69,7 +68,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Include="..\..\..\..\OneDrive\Pictures\08.jpg">
+	  <None Remove="Resources\WinImages\%24placeholder%24.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\..\..\Downloads\mail.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
@@ -79,6 +82,14 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-preview.7.23364.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Images\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Resources\WinImages\$placeholder$.png" />
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing

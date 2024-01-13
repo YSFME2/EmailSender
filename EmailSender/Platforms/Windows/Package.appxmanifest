@@ -6,14 +6,14 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
-  <Identity Name="maui-package-name-placeholder" Publisher="CN=Youssef" Version="0.0.0.0" />
+  <Identity Name="42363AliensSystems.38911946A1A2" Publisher="CN=F0DC47AF-1AA0-4E2B-959F-D48CD6311618" Version="1.1.5.0" />
 
-  <mp:PhoneIdentity PhoneProductId="74BDC714-579F-4ED2-B63A-61C60E55DC7C" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="986a8763-82c7-4073-aa0c-1b921333b05a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>$placeholder$</DisplayName>
-    <PublisherDisplayName>User Name</PublisherDisplayName>
-    <Logo>$placeholder$.png</Logo>
+    <DisplayName>Resume Sender</DisplayName>
+    <PublisherDisplayName>Aliens Systems</PublisherDisplayName>
+    <Logo>Resources\WinImages\$placeholder$.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -28,20 +28,20 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="$placeholder$"
+        DisplayName="Resume Sender"
         Description="$placeholder$"
-        Square150x150Logo="$placeholder$.png"
-        Square44x44Logo="$placeholder$.png"
+        Square150x150Logo="Resources\WinImages\$placeholder$.png"
+        Square44x44Logo="Resources\WinImages\$placeholder$.png"
         BackgroundColor="transparent">
-        <uap:DefaultTile Square71x71Logo="$placeholder$.png" Wide310x150Logo="$placeholder$.png" Square310x310Logo="$placeholder$.png"  ShortName="Email Sender">
+        <uap:DefaultTile Square71x71Logo="Resources\WinImages\$placeholder$.png" Wide310x150Logo="Resources\WinImages\$placeholder$.png" Square310x310Logo="Resources\WinImages\$placeholder$.png"  ShortName="Resume Sender">
           <uap:ShowNameOnTiles>
-            <uap:ShowOn Tile="square150x150Logo"/>
             <uap:ShowOn Tile="wide310x150Logo"/>
             <uap:ShowOn Tile="square310x310Logo"/>
+            <uap:ShowOn Tile="square150x150Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile >
-        <uap:SplashScreen Image="$placeholder$.png" />
-        <uap:LockScreen BadgeLogo="BadgeLogo.png" Notification="badgeAndTileText"/>
+        <uap:SplashScreen Image="Resources\WinImages\$placeholder$.png" />
+        <uap:LockScreen BadgeLogo="Resources\WinImages\BadgeLogo.png" Notification="badgeAndTileText"/>
       </uap:VisualElements>
     </Application>
   </Applications>

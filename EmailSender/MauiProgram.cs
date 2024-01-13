@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace EmailSender
+namespace ResumeSender
 {
     public static class MauiProgram
     {

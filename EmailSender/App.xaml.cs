@@ -1,4 +1,4 @@
-﻿namespace EmailSender
+﻿namespace ResumeSender
 {
     public partial class App : Application
     {

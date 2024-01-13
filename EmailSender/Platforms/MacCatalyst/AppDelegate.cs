@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace EmailSender
+namespace ResumeSender
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace EmailSender
+namespace ResumeSender
 {
     internal class Program : MauiApplication
     {

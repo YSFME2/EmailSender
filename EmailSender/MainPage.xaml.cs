@@ -3,7 +3,7 @@ using System.Net.Mail;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace EmailSender
+namespace ResumeSender
 {
     public partial class MainPage : TabbedPage
     {
@@ -112,7 +112,15 @@ namespace EmailSender
         {
             try
             {
-                var result = await FilePicker.Default.PickAsync(new() { PickerTitle = "Please Select Resume", FileTypes = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>> { { DevicePlatform.WinUI, new[] { "pdf", } } }) });
+                var result = await FilePicker.Default.PickAsync(new() 
+                { 
+                    PickerTitle = "Please Select Resume", 
+                    FileTypes = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>> 
+                    { 
+                        { DevicePlatform.WinUI, new[] { "pdf" } },
+                        { DevicePlatform.Android,new[]{ "application/pdf" } }
+                    })
+                });
                 if (result != null)
                 {
                     if (result.FileName.EndsWith("pdf", StringComparison.CurrentCultureIgnoreCase))
@@ -122,7 +130,9 @@ namespace EmailSender
                     }
                 }
             }
-            catch { }
+            catch (Exception ex)
+            { 
+            }
         }
     }
 
